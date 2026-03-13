@@ -1,6 +1,6 @@
 # Datadredge.SDK
 
-Server-side pageview tracking SDK for Datadredge analytics.
+Server-side pageview tracking SDK for [Datadredge analytics](https://datadredge.se).
 
 ## Installation
 

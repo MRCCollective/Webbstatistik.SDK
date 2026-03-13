@@ -13,7 +13,7 @@
     <Authors>Datadredge</Authors>
     <Description>Server-side pageview tracking SDK for Datadredge analytics</Description>
     <RepositoryUrl>https://github.com/MRCCollective/Datadredge.SDK</RepositoryUrl>
-    <PackageProjectUrl>https://github.com/MRCCollective/Datadredge.SDK</PackageProjectUrl>
+    <PackageProjectUrl>https://datadredge.se</PackageProjectUrl>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
     <IsPackable>true</IsPackable>
   </PropertyGroup>
