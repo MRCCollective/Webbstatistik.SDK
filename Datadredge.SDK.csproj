@@ -9,6 +9,7 @@
     <PackageId>Datadredge.SDK</PackageId>
     <Version>0.1.4</Version>
     <PackageIcon>icon.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
     <Authors>Datadredge</Authors>
     <Description>Server-side pageview tracking SDK for Datadredge analytics</Description>
     <RepositoryUrl>https://github.com/MRCCollective/Datadredge.SDK</RepositoryUrl>
@@ -19,6 +20,7 @@
 
   <ItemGroup>
     <None Include="icon.png" Pack="true" PackagePath="\" />
+    <None Include="README.md" Pack="true" PackagePath="\" />
   </ItemGroup>
 
   <ItemGroup>
