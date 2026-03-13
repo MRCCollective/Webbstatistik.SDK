@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>Datadredge.SDK</PackageId>
-    <Version>0.1.1</Version>
+    <Version>0.1.2</Version>
     <Authors>Datadredge</Authors>
     <Description>Server-side pageview tracking SDK for Datadredge analytics</Description>
     <RepositoryUrl>https://github.com/MRCCollective/Datadredge.SDK</RepositoryUrl>
