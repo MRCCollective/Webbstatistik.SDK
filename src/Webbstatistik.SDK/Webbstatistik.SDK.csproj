@@ -7,7 +7,7 @@
     <Nullable>enable</Nullable>
 
     <PackageId>Webbstatistik.SDK</PackageId>
-    <Version>0.1.8</Version>
+    <Version>0.1.9</Version>
     <PackageIcon>icon.png</PackageIcon>
     <PackageReadmeFile>README.md</PackageReadmeFile>
     <Authors>Webbstatistik</Authors>
