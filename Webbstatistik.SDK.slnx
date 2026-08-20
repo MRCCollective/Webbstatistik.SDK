@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/Webbstatistik.SDK/Webbstatistik.SDK.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/Webbstatistik.SDK.Tests/Webbstatistik.SDK.Tests.csproj" />
+  </Folder>
+</Solution>

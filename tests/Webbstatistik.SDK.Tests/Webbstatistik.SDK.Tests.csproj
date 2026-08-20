@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <FrameworkReference Include="Microsoft.AspNetCore.App" />
-    <ProjectReference Include="..\Webbstatistik.SDK.csproj" />
+    <ProjectReference Include="..\..\src\Webbstatistik.SDK\Webbstatistik.SDK.csproj" />
   </ItemGroup>
 
 </Project>

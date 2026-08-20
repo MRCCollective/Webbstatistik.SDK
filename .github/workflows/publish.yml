@@ -22,7 +22,8 @@ jobs:
     - name: Bump version
       id: bump
       run: |
-        VERSION=$(grep -oP '<Version>\K[^<]+' Webbstatistik.SDK.csproj)
+        PROJECT_PATH=src/Webbstatistik.SDK/Webbstatistik.SDK.csproj
+        VERSION=$(grep -oP '<Version>\K[^<]+' $PROJECT_PATH)
         echo "Current version: $VERSION"
         MAJOR=$(echo $VERSION | cut -d. -f1)
         MINOR=$(echo $VERSION | cut -d. -f2)
@@ -30,24 +31,24 @@ jobs:
         PATCH=$((PATCH + 1))
         NEW_VERSION="$MAJOR.$MINOR.$PATCH"
         echo "New version: $NEW_VERSION"
-        sed -i "s/<Version>$VERSION<\/Version>/<Version>$NEW_VERSION<\/Version>/" Webbstatistik.SDK.csproj
+        sed -i "s/<Version>$VERSION<\/Version>/<Version>$NEW_VERSION<\/Version>/" $PROJECT_PATH
         echo "version=$NEW_VERSION" >> $GITHUB_OUTPUT
 
     - name: Commit version bump
       run: |
         git config --local user.email "github-actions[bot]@users.noreply.github.com"
         git config --local user.name "github-actions[bot]"
-        git add Webbstatistik.SDK.csproj
+        git add src/Webbstatistik.SDK/Webbstatistik.SDK.csproj
         git commit -m "Bump version to ${{ steps.bump.outputs.version }}"
 
     - name: Build
-      run: dotnet build Webbstatistik.SDK.csproj -c Release
+      run: dotnet build src/Webbstatistik.SDK/Webbstatistik.SDK.csproj -c Release
 
     - name: Test
-      run: dotnet test Webbstatistik.SDK.Tests/Webbstatistik.SDK.Tests.csproj -c Release
+      run: dotnet test tests/Webbstatistik.SDK.Tests/Webbstatistik.SDK.Tests.csproj -c Release
 
     - name: Pack
-      run: dotnet pack Webbstatistik.SDK.csproj -c Release -o ./artifacts --no-build
+      run: dotnet pack src/Webbstatistik.SDK/Webbstatistik.SDK.csproj -c Release -o ./artifacts --no-build
 
     - name: Publish to NuGet.org
       run: dotnet nuget push ./artifacts/*.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.NUGET_API_KEY }}
