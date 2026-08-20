@@ -43,6 +43,9 @@ jobs:
     - name: Build
       run: dotnet build Webbstatistik.SDK.csproj -c Release
 
+    - name: Test
+      run: dotnet test Webbstatistik.SDK.Tests/Webbstatistik.SDK.Tests.csproj -c Release
+
     - name: Pack
       run: dotnet pack Webbstatistik.SDK.csproj -c Release -o ./artifacts --no-build
 
